@@ -1,0 +1,77 @@
+import React, { useState, useEffect } from 'react'
+import { Link ,useHistory} from 'react-router-dom'
+
+
+import api from '../../services/api';
+
+import './styles.css'
+
+import logoImg from '../../assets/logo.svg'
+
+export default function Profile() {
+  const [reviews, setReviews] = useState ([]); // fazer a troca dos valores , arrary
+
+  const history = useHistory();
+  const usersName = localStorage.getItem('usersName')
+  const usersId = localStorage.getItem('usersId')
+
+  useEffect(()=> { // uma funcao que chama a api
+    api.get('profile',{ // chamar api com rota
+      headers:{
+        Authorization: usersId, // passando para a api a autorizacao com base no header
+      }
+    }).then(response => {
+      setReviews(response.data) // guardar  no incident os dados do banco
+    })
+  },[usersId]);
+
+  async function handleDeleteIncitend(id){ // deletar incidentes com base no id (key)
+    try {
+      await api.delete(`reviews/${id}`,{ // chamar api com rota
+        headers:{
+          Authorization: usersId, // passando para a api a autorizacao com base no header
+        }
+      });
+      setReviews(reviews.filter(reviews => reviews.id !== id )) // vai mostrar todos incidente ao qual nao foram deletados
+    } catch (err) {
+      alert ('Erro ao deletar caso, tente novamente');
+    }
+  }
+
+  function handlelogout(){
+    localStorage.clear();
+    history.push('/');
+  }
+
+  return (
+    <div className="profile-container">
+      <header>
+        <img src={logoImg} alt="Be The Hero" />
+        <span> Bem Vindo(a), {usersName}</span>
+
+        <Link className="button" to="/incidents/new"> Criar Novo Review </Link>
+        <Link className="buttonLogout" to="/"> Logout </Link>
+      </header>
+      <h1> Todos os Reviews </h1>
+      <ul>
+          {reviews.map(reviews =>(
+            
+
+            <li key={reviews.id}>
+              
+              <strong> Nome do Filme: </strong>
+              <p> {reviews.name} </p>
+      
+              <strong> DESCRIÇÃO: </strong>
+              <p> {reviews.description} </p>
+      
+              <strong> VALOR: </strong>
+              <p> {reviews.rate} </p>
+              <button  onClick={ () => handleDeleteIncitend (reviews.id) } type="button">
+              </button>
+            </li>
+          ))}
+      </ul>
+    </div>
+  )
+}
