@@ -38,7 +38,6 @@ export default function Register() {
     <div className="register-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Be The Hero" />
           <h1> Cadastro </h1>
           <p> HALA HALA MANITO </p>
           <Link className="back-link" to="/">

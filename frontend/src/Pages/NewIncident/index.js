@@ -5,7 +5,6 @@ import './styles.css'
 
 import api from '../../services/api';
 
-import logoImg from '../../assets/logo.svg' 
 
 export default function NewIncident() {
 
@@ -25,9 +24,9 @@ export default function NewIncident() {
       rate,
     };
     try {
-      const response = await api.post('reviews',data,{ // chamar api com rota
+      const response = await api.post('reviews',data,{ 
         headers:{
-          Authorization: usersId, // passando para a api a autorizacao com base no header
+          Authorization: usersId, 
         }
       })
       history.push('/profile');
@@ -41,9 +40,8 @@ export default function NewIncident() {
     <div className="new-incident-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Be The Hero" />
-          <h1> Cadastrar Novo Caso </h1>
-          <p> Descreva o caso detalhadamente para encontrar um herói para resolver isso. </p>
+          <h1> Criar Novo Review </h1>
+          <p> Complete as informações para que possamos compartilhar seu review </p>
           <Link className="back-link" to="/profile">
             Voltar
           </Link>
@@ -59,7 +57,7 @@ export default function NewIncident() {
           value={description}
           onChange={e=> setDescription(e.target.value)}
           />
-          <input placeholder="Nota"  
+          <input type="number" step="0.1" min="0" max="10" placeholder="Nota"  
           required
           value={rate}
           onChange={e=> setRate(e.target.value)}

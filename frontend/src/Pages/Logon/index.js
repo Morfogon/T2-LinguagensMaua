@@ -3,8 +3,6 @@ import {Link, useHistory} from 'react-router-dom'
  
 import './styles.css';
 
-import logoImg from '../../assets/logo.svg';
-import heroes from '../../assets/heroes.png';
 
 import api from '../../services/api';
 
@@ -32,10 +30,8 @@ export default function Logon() {
   return (
     <div className="logon-container">
       <section className="form">
-        <img src={logoImg} alt="Be The Hero" />
-
         <form onSubmit={handleLogin}>
-          <h1> Faça seu Logon </h1>
+          <h1> Faça seu Login </h1>
           <input 
             required
             placeholder="Sua ID" 
@@ -49,7 +45,6 @@ export default function Logon() {
         </form>
         
       </section>
-      <img src={heroes} alt="Heroes" />
     </div>
   )
 }
