@@ -4,7 +4,6 @@ import { Link, Redirect } from 'react-router-dom'
 import api from '../../services/api';
 import './styles.css'
 
-import logoImg from '../../assets/logo.svg'
 
 export default function Register() {
 
@@ -39,10 +38,6 @@ export default function Register() {
       <div className="content">
         <section>
           <h1> Cadastro </h1>
-          <p> HALA HALA MANITO </p>
-          <Link className="back-link" to="/">
-            Tenho cadastro
-          </Link>
         </section>
         {redirect && <Redirect to="/" />}
         <form onSubmit={handleRegister} onReset={handleReset} >
@@ -60,6 +55,9 @@ export default function Register() {
             onChange={e => setemail(e.target.value)}
           />
           <button className="button" type="submit"> Cadastrar </button>
+          <Link className="back-link" to="/">
+            Tenho cadastro
+          </Link>
         </form>
       </div>
     </div>

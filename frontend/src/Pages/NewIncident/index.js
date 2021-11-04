@@ -41,10 +41,6 @@ export default function NewIncident() {
       <div className="content">
         <section>
           <h1> Criar Novo Review </h1>
-          <p> Complete as informações para que possamos compartilhar seu review </p>
-          <Link className="back-link" to="/profile">
-            Voltar
-          </Link>
         </section>
         <form onSubmit={handleNewIncident} >
           <input placeholder="Nome do Filme"  
@@ -63,6 +59,9 @@ export default function NewIncident() {
           onChange={e=> setRate(e.target.value)}
           />
           <button className="button" type="submit"> Cadastrar </button>
+          <Link className="back-link" to="/profile">
+            Voltar
+          </Link>
         </form>
       </div>
     </div>

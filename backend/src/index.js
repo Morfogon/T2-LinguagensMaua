@@ -1,10 +1,10 @@
-const express  = require (`express`); // usando exprees
-const cors  = require (`cors`); // usando cors
-const routes = require ('./routes'); // ./mesma pasta e passanto parametos para varial routes
+const express  = require (`express`); 
+const cors  = require (`cors`); 
+const routes = require ('./routes');
 const app = express();
 
-app.use(cors()); // decidir quem pode consumir
-app.use(express.json()); // usar json
-app.use(routes); // usando o arquivo routes.js
+app.use(cors()); 
+app.use(express.json()); 
+app.use(routes); 
 
-app.listen(3333); // nesta porta
+app.listen(3333);
