@@ -1,5 +1,5 @@
 # Trabalho T3/T4 Linguagens de Programação
-##Integrantes do Grupo
+## Integrantes do Grupo
 - Marcel Marques Caceres 17.00648-0
 - Matheus Rossini de Souza 18.01060-0
 - João Vitor Sarti 18.01224-8
