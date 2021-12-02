@@ -1,5 +1,5 @@
 # Trabalho T3/T4 Linguagens de Programação
-## Objetivo do trabalho é desenvolver uma página web de reviews
+### Objetivo do trabalho é desenvolver uma página web de reviews
 
 # Objetivos Completos:
 - [X] Desenvolver um sistema de login
