@@ -2,10 +2,10 @@
 ## Objetivo do trabalho é desenvolver uma página web de reviews
 
 # Objetivos Completos:
-- [x] Desenvolver um sistema de login
-- [x] Desenvolver um sistema de reviews
-- [x] Exibir os reviews existentes
-- [x] Desenvolver um frontend responsivo tanto a web quanto a mobile
+- [X] Desenvolver um sistema de login
+- [X] Desenvolver um sistema de reviews
+- [X] Exibir os reviews existentes
+- [X] Desenvolver um frontend responsivo tanto a web quanto a mobile
 
 # Como rodar o programa:
 - Primeiramente é necessário instalar préviamente o NodeJs, que pode ser obtido a partir do link: [NodeJs](https://nodejs.org/en/)
