@@ -13,15 +13,15 @@ export default function Logon() {
   async function handleLogin(e){
     e.preventDefault();
 
-    const data= { // controlar oque mandar
+    const data= {
       id,
     };
     
     try {
-      const response = await api.post('sessions', data); //chamada do banco
-      localStorage.setItem('usersId',id); // guardar o id
-      localStorage.setItem('usersName',response.data.name); // guardar nome
-      history.push('/profile'); // redirecionar 
+      const response = await api.post('sessions', data); 
+      localStorage.setItem('usersId',id);
+      localStorage.setItem('usersName',response.data.name);
+      history.push('/profile'); 
     } catch (err) {
       alert ('Erro no Login, tente novamente');
     }

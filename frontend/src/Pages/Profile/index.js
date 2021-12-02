@@ -33,7 +33,7 @@ export default function Profile() {
       });
       setReviews(reviews.filter(reviews => reviews.id !== id )) 
     } catch (err) {
-      alert ('Erro ao deletar caso, tente novamente');
+      alert ('Erro ao deletar review, tente novamente');
     }
   }
 
@@ -48,7 +48,7 @@ export default function Profile() {
         <span> Bem Vindo(a), {usersName}</span>
         <div className="gap">
           <div className="BruninhaAjudou">
-            <Link className="button" to="/incidents/new"> Novo Review </Link>
+            <Link className="button" to="/review/new"> Novo Review </Link>
           </div>
           <div className="BruninhaAjudou">
             <Link className="buttonLogout" to="/"> Logout </Link>

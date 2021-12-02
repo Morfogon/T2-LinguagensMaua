@@ -61,6 +61,8 @@
   border-style: dashed;
   border-color: black;
   position: relative;
+  max-width: 550px;
+
 }
 
 .profile-container ul li button {
@@ -89,6 +91,7 @@
   color: #737380;
   line-height: 21px;
   font-size: 16px;
+  word-wrap:break-word;
 }
 
 .buttonLogout {

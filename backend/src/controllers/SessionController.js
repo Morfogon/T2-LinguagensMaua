@@ -9,7 +9,7 @@ module.exports = {
         .first();
 
         if(!users){
-            response.status(400).json({ erro: ' No ONG found with this ID.'})
+            response.status(400).json({ erro: ' No user found with this ID.'})
         }
         return response.json(users);
     },

@@ -25,7 +25,7 @@ export default function Register() {
       email
     };
     try {
-      const response = await api.post('users', data); //chamada do banco
+      const response = await api.post('users', data);
       alert (`Seu ID de acesso: ${response.data.id}`);
       setRedirect(response.status);
     } catch (err) {
