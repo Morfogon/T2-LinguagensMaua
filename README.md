@@ -18,4 +18,4 @@
 - Na aplicação é possível criar seu próprio usuário, ou apenas entrar com a ID "admin"
 
 # Criação de Usuário
-## Caso deseje criar o usuário, o login via ID é a partir de um código hash que será exibido uma única vez em seu navegador, então guarde bem.
+### Caso deseje criar o usuário, o login via ID é a partir de um código hash que será exibido uma única vez em seu navegador, então guarde bem.
