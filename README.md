@@ -10,8 +10,8 @@
 # Como rodar o programa:
 - Primeiramente é necessário instalar préviamente o NodeJs, que pode ser obtido a partir do link: [NodeJs](https://nodejs.org/en/)
 - Em seguida clonar este repositório
-- Acessar a pasta frondend via cmd ou vscode, e executar o comando "npm install"
-- Acessar a pasta backend via cmd ou vscode, e executar o comando "npm install"
+- Acessar a pasta frontend via cmd ou VScode, e executar o comando "npm install"
+- Acessar a pasta backend via cmd ou VScode, e executar o comando "npm install"
 - Recomendo que abra 2 prompts diferentes para realizar os comandos
 - Por fim em ambos os prompts, executar o comando "npm start"
 - A aplicação irá ser exibida em seu navegador padrão de forma automática
